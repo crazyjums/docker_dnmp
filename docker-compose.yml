@@ -28,9 +28,10 @@ services:
     image: php-fpm
     container_name: php-fpm
     ports: 
-      - 9000:9000
+      - 9000:9001
     volumes:
       - ./php/workspace:/app
+      - ./php/php-fpm.conf:/etc/php7/php-fpm.conf
     privileged: true
   vue:
     # build:
