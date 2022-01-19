@@ -1,0 +1,16 @@
+version: "3"
+services:
+  redis:
+    image: redis
+    ports:
+      - 6380:6379
+    volumes:
+      - //e/docker/dnmp/redis/data:/data
+      - //e/docker/dnmp/redis/conf:/etc/redis/redis.conf
+  nginx:
+    image: nginx
+    ports:
+      - 8888:80
+    volumes:
+      - //e/docker/dnmp/www:/usr/share/nginx/html
+      - //e/docker/dnmp/www/vue_nginx:/usr/share/nginx/html
