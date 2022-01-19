@@ -2,15 +2,61 @@ version: "3"
 services:
   redis:
     image: redis
+    container_name: redis
     ports:
       - 6380:6379
     volumes:
-      - //e/docker/dnmp/redis/data:/data
-      - //e/docker/dnmp/redis/conf:/etc/redis/redis.conf
-  nginx:
+      - ./redis/data:/data
+      - ./redis/conf:/etc/redis/redis.conf
+  vue-nginx:
     image: nginx
+    container_name: vue-nginx
     ports:
       - 8888:80
     volumes:
-      - //e/docker/dnmp/www:/usr/share/nginx/html
-      - //e/docker/dnmp/www/vue_nginx:/usr/share/nginx/html
+      - ./nginx/html/vue_nginx:/usr/share/nginx/html/vue_nginx
+      - ./nginx/conf.d:/etc/nginx/conf.d
+  php-nginx:
+    image: nginx
+    container_name: php-nginx
+    ports:
+      - 8889:80
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d
+      - ./nginx/html/php_nginx:/usr/share/nginx/html/php_nginx
+    links:
+      - php-fpm
+    depends_on:
+      - php-fpm
+  nginx:
+    image: nginx
+    container_name: nginx
+    ports:
+      - 8890:80
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d
+      - ./nginx/html/php_nginx:/usr/share/nginx/html/vue_nginx
+      - ./nginx/html/vue_nginx:/usr/share/nginx/html/php_nginx
+    links:
+      - php-fpm
+    depends_on:
+      - php-fpm
+  php-fpm:
+    image: bitnami/php-fpm
+    container_name: php-fpm
+    ports: 
+      - 9000:9000
+    volumes:
+      - ./php/workspace:/app
+  vue:
+    # build:
+    #   context: ./vue/
+    #   dockerfile: Dockerfile
+    ports:
+      - 8899:8080
+    container_name: vue
+    image: vue_dev_nodejs_10_vuecli_4
+    volumes:
+      - ./vue/workspace:/workspace
+    tty: true
+    stdin_open: true

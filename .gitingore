@@ -1,0 +1,5 @@
+logs/*
+vue/workspace/*
+php/workspace/*
+redis/data/*
+nginx/html/*
