@@ -21,8 +21,12 @@ services:
       - ./nginx/html/php_nginx:/usr/share/nginx/html/php_nginx
       - ./nginx/html/vue_nginx:/usr/share/nginx/html/vue_nginx
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/logs:/var/log/nginx:rw
   php-fpm:
-    image: php-fpm
+    # image: php-fpm
+    build:
+      context: ./php
+      dockerfile: Dockerfile
     container_name: php-fpm
     user: root
     privileged: true
@@ -33,13 +37,12 @@ services:
       - ./php/php-fpm.conf:/etc/php7/php-fpm.conf
       - ./php/php-fpm.d:/etc/php7/php-fpm.d
   vue:
-    # build:
-    #   context: ./vue/
-    #   dockerfile: Dockerfile
+    build:
+      context: ./vue
+      dockerfile: Dockerfile
     ports:
       - 8899:8080
     container_name: vue
-    image: vue_dev_nodejs_10_vuecli_4
     volumes:
       - ./vue/workspace:/workspace
     tty: true
