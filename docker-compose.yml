@@ -12,6 +12,8 @@ services:
   nginx:
     image: nginx
     container_name: nginx
+    privileged: true
+    user: root
     ports:
       - 8888:80
     volumes:
@@ -19,20 +21,17 @@ services:
       - ./nginx/html/php_nginx:/usr/share/nginx/html/php_nginx
       - ./nginx/html/vue_nginx:/usr/share/nginx/html/vue_nginx
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
-    privileged: true
-    links:
-      - php-fpm
-    depends_on:
-      - php-fpm
   php-fpm:
     image: php-fpm
     container_name: php-fpm
+    user: root
+    privileged: true
     ports: 
-      - 9000:9001
+      - 9000:9000
     volumes:
       - ./php/workspace:/app
       - ./php/php-fpm.conf:/etc/php7/php-fpm.conf
-    privileged: true
+      - ./php/php-fpm.d:/etc/php7/php-fpm.d
   vue:
     # build:
     #   context: ./vue/

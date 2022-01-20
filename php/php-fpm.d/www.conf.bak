@@ -1,21 +1,3 @@
-[global]
-;error_log = /proc/self/fd/2
-
-; https://github.com/docker-library/php/pull/725#issuecomment-443540114
-log_limit = 8192
-
-[www]
-; if we send this to /proc/self/fd/1, it never appears
-;access.log = /proc/self/fd/2
-
-clear_env = no
-
-; Ensure worker stdout and stderr are sent to the main error log.
-catch_workers_output = yes
-decorate_workers_output = no
-[root@iZ2ze5r8dxy98qoc63rq3vZ php-fpm.d]# ls
-docker.conf  www.conf  zz-docker.conf
-[root@iZ2ze5r8dxy98qoc63rq3vZ php-fpm.d]# cat www.conf 
 ; Start a new pool named 'www'.
 ; the variable $pool can be used in any directive and will be replaced by the
 ; pool name ('www' here)
@@ -30,7 +12,7 @@ docker.conf  www.conf  zz-docker.conf
 ; - 'chdir'
 ; - 'php_values'
 ; - 'php_admin_values'
-; When not set, the global prefix (or NONE) applies instead.
+; When not set, the global prefix (or /usr) applies instead.
 ; Note: This directive can also be relative to the global prefix.
 ; Default Value: none
 ;prefix = /path/to/pools/$pool
@@ -51,7 +33,7 @@ group = root
 ;                            (IPv6 and IPv4-mapped) on a specific port;
 ;   '/path/to/unix/socket' - to listen on a unix socket.
 ; Note: This value is mandatory.
-listen = 127.0.0.1:9000
+listen = 0.0.0.0:9000
 
 ; Set listen(2) backlog.
 ; Default Value: 511 (-1 on FreeBSD and OpenBSD)
@@ -59,11 +41,12 @@ listen = 127.0.0.1:9000
 
 ; Set permissions for unix socket, if one is used. In Linux, read/write
 ; permissions must be set in order to allow connections from a web server. Many
-; BSD-derived systems allow connections regardless of permissions.
+; BSD-derived systems allow connections regardless of permissions. The owner
+; and group can be specified either by name or by their numeric IDs.
 ; Default Values: user and group are set as the running user
 ;                 mode is set to 0660
-;listen.owner = www-data
-;listen.group = www-data
+;listen.owner = nobody
+;listen.group = nobody
 ;listen.mode = 0660
 ; When POSIX Access Control Lists are supported you can set them using
 ; these options, value is a comma separated list of user/group names.
@@ -128,12 +111,12 @@ pm = dynamic
 ; forget to tweak pm.* to fit your needs.
 ; Note: Used when pm is set to 'static', 'dynamic' or 'ondemand'
 ; Note: This value is mandatory.
-pm.max_children = 512
+pm.max_children = 5
 
 ; The number of child processes created on startup.
 ; Note: Used only when pm is set to 'dynamic'
-; Default Value: min_spare_servers + (max_spare_servers - min_spare_servers) / 2
-pm.start_servers = 50
+; Default Value: (min_spare_servers + max_spare_servers) / 2
+pm.start_servers = 2
 
 ; The desired minimum number of idle server processes.
 ; Note: Used only when pm is set to 'dynamic'
@@ -143,7 +126,7 @@ pm.min_spare_servers = 1
 ; The desired maximum number of idle server processes.
 ; Note: Used only when pm is set to 'dynamic'
 ; Note: Mandatory when pm is set to 'dynamic'
-pm.max_spare_servers = 512
+pm.max_spare_servers = 3
 
 ; The number of seconds after which an idle process will be killed.
 ; Note: Used only when pm is set to 'ondemand'
@@ -247,7 +230,7 @@ pm.max_spare_servers = 512
 ;   last request memory:  0
 ;
 ; Note: There is a real-time FPM status monitoring sample web page available
-;       It's available in: /usr/local/share/php/fpm/status.html
+;       It's available in: /usr/share/php7/fpm/status.html
 ;
 ; Note: The value must start with a leading slash (/). The value can be
 ;       anything, but it may not be a good idea to use the .php extension or it
@@ -274,7 +257,7 @@ pm.max_spare_servers = 512
 
 ; The access log file
 ; Default: not set
-;access.log = log/$pool.access.log
+;access.log = log/php7/$pool.access.log
 
 ; The access log format.
 ; The following syntax is allowed
@@ -338,13 +321,13 @@ pm.max_spare_servers = 512
 ; The log file for slow requests
 ; Default Value: not set
 ; Note: slowlog is mandatory if request_slowlog_timeout is set
-slowlog = /data/nginx/logs/$pool.log.slow
+;slowlog = log/php7/$pool.slow.log
 
 ; The timeout for serving a single request after which a PHP backtrace will be
 ; dumped to the 'slowlog' file. A value of '0s' means 'off'.
 ; Available units: s(econds)(default), m(inutes), h(ours), or d(ays)
 ; Default Value: 0
-request_slowlog_timeout = 2s
+;request_slowlog_timeout = 0
 
 ; Depth of slow log stack trace.
 ; Default Value: 20
@@ -356,6 +339,14 @@ request_slowlog_timeout = 2s
 ; Available units: s(econds)(default), m(inutes), h(ours), or d(ays)
 ; Default Value: 0
 ;request_terminate_timeout = 0
+
+; The timeout set by 'request_terminate_timeout' ini option is not engaged after
+; application calls 'fastcgi_finish_request' or when application has finished and
+; shutdown functions are being called (registered via register_shutdown_function).
+; This option will enable timeout limit to be applied unconditionally
+; even in such cases.
+; Default Value: no
+;request_terminate_timeout_track_finished = no
 
 ; Set open file descriptor rlimit.
 ; Default Value: system defined value
@@ -437,12 +428,12 @@ request_slowlog_timeout = 2s
 ; instead.
 
 ; Note: path INI options can be relative and will be expanded with the prefix
-; (pool, global or /usr/local)
+; (pool, global or /usr)
 
 ; Default Value: nothing is defined by default except the values in php.ini and
 ;                specified at startup with the -d argument
 ;php_admin_value[sendmail_path] = /usr/sbin/sendmail -t -i -f www@my.domain.com
 ;php_flag[display_errors] = off
-;php_admin_value[error_log] = /var/log/fpm-php.www.log
+;php_admin_value[error_log] = /var/log/php7/$pool.error.log
 ;php_admin_flag[log_errors] = on
 ;php_admin_value[memory_limit] = 32M

@@ -1,10 +1,4 @@
-### 1 安装环境
-
-#### 1.1 安装docker
-
-#### 1.2 安装docker-compose
-
-### 2 开启服务
+### 1 开启服务
 
 ```bash
 $ docker-compose up [service_name]
@@ -20,7 +14,7 @@ $ docker-compose up redis
 $ docker-compose up reids -d  //以守护进程的方式运行
 ```
 
-### 3 关闭或重启服务
+### 2 关闭或重启服务
 
 ```bash
 $ docker ps  //查看服务的container id
