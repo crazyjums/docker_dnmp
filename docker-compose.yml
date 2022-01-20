@@ -7,7 +7,7 @@ services:
       - 6380:6379
     volumes:
       - ./redis/data:/data
-      - ./redis/conf:/etc/redis/redis.conf
+      - ./redis/conf:/etc/redis/redis.conf:rw
     privileged: true
   nginx:
     image: nginx
@@ -17,10 +17,10 @@ services:
     ports:
       - 8888:80
     volumes:
-      - ./nginx/conf.d:/etc/nginx/conf.d
+      - ./nginx/conf.d:/etc/nginx/conf.d:rw
       - ./nginx/html/php_nginx:/usr/share/nginx/html/php_nginx
       - ./nginx/html/vue_nginx:/usr/share/nginx/html/vue_nginx
-      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:rw
       - ./nginx/logs:/var/log/nginx:rw
   php-fpm:
     # image: php-fpm
@@ -34,8 +34,8 @@ services:
       - 9000:9000
     volumes:
       - ./php/workspace:/app
-      - ./php/php-fpm.conf:/etc/php7/php-fpm.conf
-      - ./php/php-fpm.d:/etc/php7/php-fpm.d
+      - ./php/php-fpm.conf:/etc/php7/php-fpm.conf:rw
+      - ./php/php-fpm.d:/etc/php7/php-fpm.d:rw
   vue:
     build:
       context: ./vue
@@ -44,6 +44,6 @@ services:
       - 8899:8080
     container_name: vue
     volumes:
-      - ./vue/workspace:/workspace
+      - ./vue/workspace:/workspace:rw
     tty: true
     stdin_open: true
