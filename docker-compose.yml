@@ -36,9 +36,9 @@ services:
       - ./nginx/logs:/var/log/nginx:rw
   php-fpm:
     image: php-fpm
-    # build:
-    #   context: ./php
-    #   dockerfile: Dockerfile
+    build:
+      context: ./php
+      dockerfile: Dockerfile
     container_name: php-fpm
     user: root
     privileged: true
@@ -49,9 +49,9 @@ services:
       - ./php/php-fpm.conf:/etc/php7/php-fpm.conf:rw
       - ./php/php-fpm.d:/etc/php7/php-fpm.d:rw
   vue:
-    # build:
-    #   context: ./vue
-    #   dockerfile: Dockerfile
+    build:
+      context: ./vue
+      dockerfile: Dockerfile
     image: vue_dev_nodejs_10_vuecli_4
     ports:
       - 8899:8080
