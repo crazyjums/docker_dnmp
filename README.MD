@@ -1,8 +1,8 @@
 ### 1 开启服务
 
 ```bash
-$ docker-compose up [service_name]
-$ docker-compose up [service_name] -d  //以守护进程的方式运行
+$ docker-compose up <service_name>
+$ docker-compose up <service_name> -d  //以守护进程的方式运行
 ```
 
 举例：
@@ -18,9 +18,9 @@ $ docker-compose up reids -d  //以守护进程的方式运行
 
 ```bash
 $ docker ps  //查看服务的container id
-$ docker restart [service_container_id]  //重启服务
-$ docker stop [service_container_id]  //停止服务
-$ docker start [service_container_id]  //开启服务
+$ docker restart <service_container_id>  //重启服务
+$ docker stop <service_container_id>  //停止服务
+$ docker start <service_container_id>  //开启服务
 ```
 
 举例：

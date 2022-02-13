@@ -9,6 +9,18 @@ services:
       - ./redis/data:/data
       - ./redis/conf:/etc/redis/redis.conf:rw
     privileged: true
+  mysql:
+    image: mysql:5.7
+    container_name: mysql
+    restart: always
+    ports:
+      - 3307:3306
+    volumes:
+      - ./mysql/conf.d:/etc/mysql/conf.d:rw     #配置文件挂载到当前宿主机的/home/mysql/conf
+      - ./mysql/data:/var/lib/mysql:rw            #数据挂载到当前宿主机的 /home/mysql/data
+      - ./mysql/my.cnf:/etc/my.cnf
+    environment:
+      - MYSQL_ROOT_PASSWORD=12345678
   nginx:
     image: nginx
     container_name: nginx
@@ -24,9 +36,9 @@ services:
       - ./nginx/logs:/var/log/nginx:rw
   php-fpm:
     image: php-fpm
-    # build:
-    #   context: ./php
-    #   dockerfile: Dockerfile
+    build:
+      context: ./php
+      dockerfile: Dockerfile
     container_name: php-fpm
     user: root
     privileged: true
@@ -40,6 +52,7 @@ services:
     build:
       context: ./vue
       dockerfile: Dockerfile
+    image: vue_dev_nodejs_10_vuecli_4
     ports:
       - 8899:8080
     container_name: vue
