@@ -338,3 +338,7 @@
 2022/02/09 12:43:57 [error] 32#32: *3 directory index of "/usr/share/nginx/html/php_nginx/" is forbidden, client: 172.18.0.1, server: phptest.com, request: "GET / HTTP/1.1", host: "phptest.com:8888"
 2022/02/09 12:44:01 [error] 32#32: *3 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: phptest.com, request: "GET /1.php HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "phptest.com:8888"
 2022/02/09 12:44:03 [error] 32#32: *3 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: phptest.com, request: "GET /1.php HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "phptest.com:8888"
+2022/02/13 05:41:39 [emerg] 1#1: open() "/data/nginx/logs/error.log" failed (2: No such file or directory)
+2022/02/13 05:41:43 [emerg] 1#1: open() "/data/nginx/logs/error.log" failed (2: No such file or directory)
+2022/02/13 05:46:54 [emerg] 1#1: host not found in upstream "php-fpm" in /etc/nginx/conf.d/default.conf:14
+2022/02/13 05:47:23 [emerg] 1#1: host not found in upstream "php-fpm" in /etc/nginx/conf.d/default.conf:14

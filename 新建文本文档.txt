@@ -1,0 +1,1 @@
+apk add gcc make libc-dev sqlite-dev
