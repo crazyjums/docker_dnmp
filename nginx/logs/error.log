@@ -338,3 +338,272 @@
 2022/02/09 12:43:57 [error] 32#32: *3 directory index of "/usr/share/nginx/html/php_nginx/" is forbidden, client: 172.18.0.1, server: phptest.com, request: "GET / HTTP/1.1", host: "phptest.com:8888"
 2022/02/09 12:44:01 [error] 32#32: *3 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: phptest.com, request: "GET /1.php HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "phptest.com:8888"
 2022/02/09 12:44:03 [error] 32#32: *3 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: phptest.com, request: "GET /1.php HTTP/1.1", upstream: "fastcgi://172.18.0.3:9000", host: "phptest.com:8888"
+2022/02/17 11:25:22 [notice] 1#1: using the "epoll" event method
+2022/02/17 11:25:22 [notice] 1#1: nginx/1.21.6
+2022/02/17 11:25:22 [notice] 1#1: built by gcc 10.2.1 20210110 (Debian 10.2.1-6) 
+2022/02/17 11:25:22 [notice] 1#1: OS: Linux 5.4.72-microsoft-standard-WSL2
+2022/02/17 11:25:22 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/02/17 11:25:22 [notice] 1#1: start worker processes
+2022/02/17 11:25:22 [notice] 1#1: start worker process 30
+2022/02/17 11:25:22 [notice] 1#1: start worker process 31
+2022/02/17 11:25:22 [notice] 1#1: start worker process 32
+2022/02/17 11:25:22 [notice] 1#1: start worker process 33
+2022/02/17 11:25:22 [notice] 1#1: start worker process 34
+2022/02/17 11:25:22 [notice] 1#1: start worker process 35
+2022/02/17 11:25:22 [notice] 1#1: start worker process 36
+2022/02/17 11:25:22 [notice] 1#1: start worker process 37
+2022/02/17 12:29:10 [notice] 7#0: using the "epoll" event method
+2022/02/17 12:29:10 [notice] 7#0: nginx/1.18.0
+2022/02/17 12:29:10 [notice] 7#0: built by gcc 10.3.1 20211027 (Alpine 10.3.1_git20211027) 
+2022/02/17 12:29:10 [notice] 7#0: OS: Linux 5.4.72-microsoft-standard-WSL2
+2022/02/17 12:29:10 [notice] 7#0: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/02/17 12:29:10 [notice] 8#0: start worker processes
+2022/02/17 12:29:10 [notice] 8#0: start worker process 10
+2022/02/17 12:30:25 [notice] 8#0: using the "epoll" event method
+2022/02/17 12:30:25 [notice] 8#0: nginx/1.18.0
+2022/02/17 12:30:25 [notice] 8#0: built by gcc 10.3.1 20211027 (Alpine 10.3.1_git20211027) 
+2022/02/17 12:30:25 [notice] 8#0: OS: Linux 5.4.72-microsoft-standard-WSL2
+2022/02/17 12:30:25 [notice] 8#0: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/02/17 12:30:25 [notice] 9#0: start worker processes
+2022/02/21 02:14:49 [notice] 8#0: using the "epoll" event method
+2022/02/21 02:14:49 [notice] 8#0: nginx/1.18.0
+2022/02/21 02:14:49 [notice] 8#0: built by gcc 10.3.1 20211027 (Alpine 10.3.1_git20211027) 
+2022/02/21 02:14:49 [notice] 8#0: OS: Linux 5.4.72-microsoft-standard-WSL2
+2022/02/21 02:14:49 [notice] 8#0: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/02/21 02:14:49 [notice] 9#0: start worker processes
+2022/02/21 02:14:49 [notice] 9#0: start worker process 11
+2022/02/21 02:14:49 [notice] 9#0: start worker process 12
+2022/02/21 02:15:41 [notice] 7#0: using the "epoll" event method
+2022/02/21 02:15:41 [notice] 7#0: nginx/1.18.0
+2022/02/21 02:15:41 [notice] 7#0: built by gcc 10.3.1 20211027 (Alpine 10.3.1_git20211027) 
+2022/02/21 02:15:41 [notice] 7#0: OS: Linux 5.4.72-microsoft-standard-WSL2
+2022/02/21 02:15:41 [notice] 7#0: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/02/21 02:15:41 [notice] 8#0: start worker processes
+2022/02/21 02:15:41 [notice] 8#0: start worker process 10
+2022/02/21 02:17:33 [notice] 8#0: using the "epoll" event method
+2022/02/21 02:17:33 [notice] 8#0: nginx/1.18.0
+2022/02/21 02:17:33 [notice] 8#0: built by gcc 10.3.1 20211027 (Alpine 10.3.1_git20211027) 
+2022/02/21 02:17:33 [notice] 8#0: OS: Linux 5.4.72-microsoft-standard-WSL2
+2022/02/21 02:17:33 [notice] 8#0: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/02/21 02:17:33 [notice] 9#0: start worker processes
+2022/02/21 02:17:33 [notice] 9#0: start worker process 11
+2022/02/21 02:18:12 [notice] 8#0: using the "epoll" event method
+2022/02/21 02:18:12 [notice] 8#0: nginx/1.18.0
+2022/02/21 02:18:12 [notice] 8#0: built by gcc 10.3.1 20211027 (Alpine 10.3.1_git20211027) 
+2022/02/21 02:18:12 [notice] 8#0: OS: Linux 5.4.72-microsoft-standard-WSL2
+2022/02/21 02:18:12 [notice] 8#0: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/02/21 02:18:12 [notice] 9#0: start worker processes
+2022/02/21 02:21:18 [notice] 7#0: using the "epoll" event method
+2022/02/21 02:21:18 [notice] 7#0: nginx/1.18.0
+2022/02/21 02:21:18 [notice] 7#0: built by gcc 10.3.1 20211027 (Alpine 10.3.1_git20211027) 
+2022/02/21 02:21:18 [notice] 7#0: OS: Linux 5.4.72-microsoft-standard-WSL2
+2022/02/21 02:21:18 [notice] 7#0: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/02/21 02:21:18 [notice] 8#0: start worker processes
+2022/02/21 02:21:18 [notice] 8#0: start worker process 10
+2022/02/21 02:21:35 [notice] 8#0: using the "epoll" event method
+2022/02/21 02:21:35 [notice] 8#0: nginx/1.18.0
+2022/02/21 02:21:35 [notice] 8#0: built by gcc 10.3.1 20211027 (Alpine 10.3.1_git20211027) 
+2022/02/21 02:21:35 [notice] 8#0: OS: Linux 5.4.72-microsoft-standard-WSL2
+2022/02/21 02:21:35 [notice] 8#0: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/02/21 02:21:35 [notice] 9#0: start worker processes
+2022/02/21 02:21:35 [notice] 9#0: start worker process 11
+2022/02/21 02:22:32 [notice] 8#0: using the "epoll" event method
+2022/02/21 02:22:32 [notice] 8#0: nginx/1.18.0
+2022/02/21 02:22:32 [notice] 8#0: built by gcc 10.3.1 20211027 (Alpine 10.3.1_git20211027) 
+2022/02/21 02:22:32 [notice] 8#0: OS: Linux 5.4.72-microsoft-standard-WSL2
+2022/02/21 02:22:32 [notice] 8#0: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/02/21 02:22:32 [notice] 9#0: start worker processes
+2022/02/21 02:22:32 [notice] 9#0: start worker process 11
+2022/02/21 06:23:17 [notice] 8#0: using the "epoll" event method
+2022/02/21 06:23:17 [notice] 8#0: nginx/1.18.0
+2022/02/21 06:23:17 [notice] 8#0: built by gcc 10.3.1 20211027 (Alpine 10.3.1_git20211027) 
+2022/02/21 06:23:17 [notice] 8#0: OS: Linux 5.4.72-microsoft-standard-WSL2
+2022/02/21 06:23:17 [notice] 8#0: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/02/21 06:23:17 [notice] 9#0: start worker processes
+2022/02/21 09:58:45 [notice] 1#0: using the "epoll" event method
+2022/02/21 09:58:45 [notice] 1#0: nginx/1.18.0
+2022/02/21 09:58:45 [notice] 1#0: built by gcc 10.3.1 20211027 (Alpine 10.3.1_git20211027) 
+2022/02/21 09:58:45 [notice] 1#0: OS: Linux 5.4.72-microsoft-standard-WSL2
+2022/02/21 09:58:45 [notice] 1#0: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/02/21 09:58:45 [notice] 1#0: start worker processes
+2022/02/21 09:58:45 [notice] 1#0: start worker process 7
+2022/02/21 09:58:45 [notice] 1#0: start worker process 8
+2022/02/21 09:58:45 [notice] 1#0: start worker process 9
+2022/02/21 09:58:45 [notice] 1#0: start worker process 10
+2022/02/21 10:00:39 [error] 10#0: *5 open() "/usr/share/nginx/html/vue_nginx/1.php" failed (2: No such file or directory), client: 172.18.0.1, server: vuetest.com, request: "GET /1.php HTTP/1.1", host: "vuetest.com:8888"
+2022/02/21 10:00:39 [error] 10#0: *5 open() "/usr/share/nginx/html/vue_nginx/favicon.ico" failed (2: No such file or directory), client: 172.18.0.1, server: vuetest.com, request: "GET /favicon.ico HTTP/1.1", host: "vuetest.com:8888", referrer: "http://vuetest.com:8888/1.php"
+2022/02/21 10:00:43 [error] 10#0: *5 "/usr/share/nginx/html/vue_nginx/index.html" is not found (2: No such file or directory), client: 172.18.0.1, server: vuetest.com, request: "GET / HTTP/1.1", host: "vuetest.com:8888"
+2022/02/21 10:00:59 [error] 10#0: *5 open() "/usr/share/nginx/html/vue_nginx/1.html" failed (2: No such file or directory), client: 172.18.0.1, server: vuetest.com, request: "GET /1.html HTTP/1.1", host: "vuetest.com:8888"
+2022/02/21 10:01:04 [error] 10#0: *5 open() "/usr/share/nginx/html/vue_nginx/index.html" failed (2: No such file or directory), client: 172.18.0.1, server: vuetest.com, request: "GET /index.html HTTP/1.1", host: "vuetest.com:8888"
+2022/02/21 10:01:07 [error] 10#0: *5 "/usr/share/nginx/html/vue_nginx/index.html" is not found (2: No such file or directory), client: 172.18.0.1, server: vuetest.com, request: "GET / HTTP/1.1", host: "vuetest.com:8888"
+2022/02/21 10:02:21 [error] 7#0: *6 "/usr/share/nginx/html/vue_nginx/index.html" is not found (2: No such file or directory), client: 172.18.0.1, server: vuetest.com, request: "GET / HTTP/1.1", host: "vuetest.com:8888"
+2022/02/21 10:03:05 [notice] 1#0: signal 15 (SIGTERM) received, exiting
+2022/02/21 10:03:05 [notice] 7#0: exiting
+2022/02/21 10:03:05 [notice] 8#0: exiting
+2022/02/21 10:03:05 [notice] 9#0: exiting
+2022/02/21 10:03:05 [notice] 10#0: exiting
+2022/02/21 10:03:05 [notice] 7#0: exit
+2022/02/21 10:03:05 [notice] 10#0: exit
+2022/02/21 10:03:05 [notice] 8#0: exit
+2022/02/21 10:03:05 [notice] 9#0: exit
+2022/02/21 10:03:05 [notice] 1#0: signal 17 (SIGCHLD) received from 7
+2022/02/21 10:03:05 [notice] 1#0: worker process 7 exited with code 0
+2022/02/21 10:03:05 [notice] 1#0: worker process 8 exited with code 0
+2022/02/21 10:03:05 [notice] 1#0: worker process 9 exited with code 0
+2022/02/21 10:03:05 [notice] 1#0: worker process 10 exited with code 0
+2022/02/21 10:03:05 [notice] 1#0: exit
+2022/02/21 10:03:06 [notice] 1#0: using the "epoll" event method
+2022/02/21 10:03:06 [notice] 1#0: nginx/1.18.0
+2022/02/21 10:03:06 [notice] 1#0: built by gcc 10.3.1 20211027 (Alpine 10.3.1_git20211027) 
+2022/02/21 10:03:06 [notice] 1#0: OS: Linux 5.4.72-microsoft-standard-WSL2
+2022/02/21 10:03:06 [notice] 1#0: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/02/21 10:03:06 [notice] 1#0: start worker processes
+2022/02/21 10:03:06 [notice] 1#0: start worker process 8
+2022/02/21 10:03:06 [notice] 1#0: start worker process 9
+2022/02/21 10:03:06 [notice] 1#0: start worker process 10
+2022/02/21 10:03:06 [notice] 1#0: start worker process 11
+2022/02/21 10:03:22 [error] 8#0: *7 directory index of "/usr/local/nginx/html/php_nginx/" is forbidden, client: 172.18.0.1, server: phptest.com, request: "GET / HTTP/1.1", host: "phptest.com:8888"
+2022/02/21 10:03:26 [error] 8#0: *7 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: phptest.com, request: "GET /1.php HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "phptest.com:8888"
+2022/02/21 10:24:20 [notice] 1#0: signal 15 (SIGTERM) received, exiting
+2022/02/21 10:24:20 [notice] 8#0: exiting
+2022/02/21 10:24:20 [notice] 9#0: exiting
+2022/02/21 10:24:20 [notice] 10#0: exiting
+2022/02/21 10:24:20 [notice] 11#0: exiting
+2022/02/21 10:24:20 [notice] 8#0: exit
+2022/02/21 10:24:20 [notice] 9#0: exit
+2022/02/21 10:24:20 [notice] 1#0: signal 17 (SIGCHLD) received from 8
+2022/02/21 10:24:20 [notice] 10#0: exit
+2022/02/21 10:24:20 [notice] 11#0: exit
+2022/02/21 10:24:20 [notice] 1#0: worker process 8 exited with code 0
+2022/02/21 10:24:20 [notice] 1#0: worker process 9 exited with code 0
+2022/02/21 10:24:20 [notice] 1#0: worker process 10 exited with code 0
+2022/02/21 10:24:20 [notice] 1#0: worker process 11 exited with code 0
+2022/02/21 10:24:20 [notice] 1#0: exit
+2022/02/21 10:24:37 [notice] 1#0: using the "epoll" event method
+2022/02/21 10:24:37 [notice] 1#0: nginx/1.18.0
+2022/02/21 10:24:37 [notice] 1#0: built by gcc 10.3.1 20211027 (Alpine 10.3.1_git20211027) 
+2022/02/21 10:24:37 [notice] 1#0: OS: Linux 5.4.72-microsoft-standard-WSL2
+2022/02/21 10:24:37 [notice] 1#0: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/02/21 10:24:37 [notice] 1#0: start worker processes
+2022/02/21 10:24:37 [notice] 1#0: start worker process 7
+2022/02/21 10:24:37 [notice] 1#0: start worker process 8
+2022/02/21 10:24:37 [notice] 1#0: start worker process 9
+2022/02/21 10:24:37 [notice] 1#0: start worker process 10
+2022/02/21 10:26:26 [error] 7#0: *7 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: phptest.com, request: "GET /2.php HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "phptest.com:8888"
+2022/02/21 10:27:47 [error] 7#0: *11 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: phptest.com, request: "GET /2.php HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "phptest.com:8888"
+2022/02/21 10:27:48 [error] 7#0: *11 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: phptest.com, request: "GET /2.php HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "phptest.com:8888"
+2022/02/21 10:29:09 [error] 7#0: *15 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: phptest.com, request: "GET /2.php HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "phptest.com:8888"
+2022/02/21 10:29:09 [error] 7#0: *15 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: phptest.com, request: "GET /2.php HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "phptest.com:8888"
+2022/02/21 10:29:12 [error] 7#0: *15 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: phptest.com, request: "GET /2.php HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "phptest.com:8888"
+2022/02/21 10:31:04 [notice] 1#0: signal 15 (SIGTERM) received, exiting
+2022/02/21 10:31:04 [notice] 7#0: exiting
+2022/02/21 10:31:04 [notice] 8#0: exiting
+2022/02/21 10:31:04 [notice] 9#0: exiting
+2022/02/21 10:31:04 [notice] 10#0: exiting
+2022/02/21 10:31:04 [notice] 7#0: exit
+2022/02/21 10:31:04 [notice] 8#0: exit
+2022/02/21 10:31:04 [notice] 1#0: signal 17 (SIGCHLD) received from 7
+2022/02/21 10:31:04 [notice] 9#0: exit
+2022/02/21 10:31:04 [notice] 10#0: exit
+2022/02/21 10:31:04 [notice] 1#0: worker process 7 exited with code 0
+2022/02/21 10:31:04 [notice] 1#0: worker process 8 exited with code 0
+2022/02/21 10:31:04 [notice] 1#0: worker process 9 exited with code 0
+2022/02/21 10:31:04 [notice] 1#0: worker process 10 exited with code 0
+2022/02/21 10:31:04 [notice] 1#0: exit
+2022/02/21 10:31:21 [notice] 1#0: using the "epoll" event method
+2022/02/21 10:31:21 [notice] 1#0: nginx/1.18.0
+2022/02/21 10:31:21 [notice] 1#0: built by gcc 10.3.1 20211027 (Alpine 10.3.1_git20211027) 
+2022/02/21 10:31:21 [notice] 1#0: OS: Linux 5.4.72-microsoft-standard-WSL2
+2022/02/21 10:31:21 [notice] 1#0: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/02/21 10:31:21 [notice] 1#0: start worker processes
+2022/02/21 10:31:21 [notice] 1#0: start worker process 8
+2022/02/21 10:31:21 [notice] 1#0: start worker process 9
+2022/02/21 10:31:21 [notice] 1#0: start worker process 10
+2022/02/21 10:31:21 [notice] 1#0: start worker process 11
+2022/02/21 11:34:20 [notice] 1#0: signal 15 (SIGTERM) received, exiting
+2022/02/21 11:34:20 [notice] 8#0: exiting
+2022/02/21 11:34:20 [notice] 9#0: exiting
+2022/02/21 11:34:20 [notice] 10#0: exiting
+2022/02/21 11:34:20 [notice] 11#0: exiting
+2022/02/21 11:34:20 [notice] 8#0: exit
+2022/02/21 11:34:20 [notice] 11#0: exit
+2022/02/21 11:34:20 [notice] 9#0: exit
+2022/02/21 11:34:20 [notice] 10#0: exit
+2022/02/21 11:34:20 [notice] 1#0: signal 17 (SIGCHLD) received from 8
+2022/02/21 11:34:20 [notice] 1#0: worker process 8 exited with code 0
+2022/02/21 11:34:20 [notice] 1#0: worker process 9 exited with code 0
+2022/02/21 11:34:20 [notice] 1#0: worker process 10 exited with code 0
+2022/02/21 11:34:20 [notice] 1#0: worker process 11 exited with code 0
+2022/02/21 11:34:20 [notice] 1#0: exit
+2022/02/21 11:34:49 [notice] 1#0: using the "epoll" event method
+2022/02/21 11:34:49 [notice] 1#0: nginx/1.18.0
+2022/02/21 11:34:49 [notice] 1#0: built by gcc 10.3.1 20211027 (Alpine 10.3.1_git20211027) 
+2022/02/21 11:34:49 [notice] 1#0: OS: Linux 5.4.72-microsoft-standard-WSL2
+2022/02/21 11:34:49 [notice] 1#0: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/02/21 11:34:49 [notice] 1#0: start worker processes
+2022/02/21 11:34:49 [notice] 1#0: start worker process 7
+2022/02/21 11:34:49 [notice] 1#0: start worker process 8
+2022/02/21 11:34:49 [notice] 1#0: start worker process 9
+2022/02/21 11:34:49 [notice] 1#0: start worker process 10
+2022/02/21 11:34:54 [error] 7#0: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: phptest.com, request: "GET /1.php HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "phptest.com:8888"
+2022/02/21 11:34:57 [error] 7#0: *1 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: phptest.com, request: "GET /1.php HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "phptest.com:8888"
+2022/02/21 11:34:59 [error] 7#0: *1 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: phptest.com, request: "GET /1.php HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "phptest.com:8888"
+2022/02/21 11:35:00 [error] 7#0: *1 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: phptest.com, request: "GET /1.php HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "phptest.com:8888"
+2022/02/21 11:35:00 [error] 7#0: *1 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: phptest.com, request: "GET /1.php HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "phptest.com:8888"
+2022/02/21 11:35:02 [error] 7#0: *1 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: phptest.com, request: "GET /1.php HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "phptest.com:8888"
+2022/02/21 11:37:32 [notice] 1#0: signal 15 (SIGTERM) received, exiting
+2022/02/21 11:37:32 [notice] 7#0: exiting
+2022/02/21 11:37:32 [notice] 8#0: exiting
+2022/02/21 11:37:32 [notice] 9#0: exiting
+2022/02/21 11:37:32 [notice] 10#0: exiting
+2022/02/21 11:37:32 [notice] 7#0: exit
+2022/02/21 11:37:32 [notice] 8#0: exit
+2022/02/21 11:37:32 [notice] 9#0: exit
+2022/02/21 11:37:32 [notice] 10#0: exit
+2022/02/21 11:37:32 [notice] 1#0: signal 17 (SIGCHLD) received from 7
+2022/02/21 11:37:32 [notice] 1#0: worker process 7 exited with code 0
+2022/02/21 11:37:32 [notice] 1#0: worker process 8 exited with code 0
+2022/02/21 11:37:32 [notice] 1#0: worker process 9 exited with code 0
+2022/02/21 11:37:32 [notice] 1#0: worker process 10 exited with code 0
+2022/02/21 11:37:32 [notice] 1#0: exit
+2022/02/21 11:37:50 [notice] 1#0: using the "epoll" event method
+2022/02/21 11:37:50 [notice] 1#0: nginx/1.18.0
+2022/02/21 11:37:50 [notice] 1#0: built by gcc 10.3.1 20211027 (Alpine 10.3.1_git20211027) 
+2022/02/21 11:37:50 [notice] 1#0: OS: Linux 5.4.72-microsoft-standard-WSL2
+2022/02/21 11:37:50 [notice] 1#0: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/02/21 11:37:50 [notice] 1#0: start worker processes
+2022/02/21 11:37:50 [notice] 1#0: start worker process 7
+2022/02/21 11:37:50 [notice] 1#0: start worker process 8
+2022/02/21 11:37:50 [notice] 1#0: start worker process 9
+2022/02/21 11:37:50 [notice] 1#0: start worker process 10
+2022/02/21 11:37:50 [error] 7#0: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: phptest.com, request: "GET /1.php HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "phptest.com:8888"
+2022/02/21 11:37:52 [error] 7#0: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: phptest.com, request: "GET /1.php HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "phptest.com:8888"
+2022/02/21 11:37:53 [error] 7#0: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.18.0.1, server: phptest.com, request: "GET /1.php HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "phptest.com:8888"
+2022/02/21 11:39:16 [error] 7#0: *10 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/app/laravel_blog/../vendor/autoload.php): failed to open stream: No such file or directory in /app/laravel_blog/index.php on line 24PHP message: PHP Fatal error:  require(): Failed opening required '/app/laravel_blog/../vendor/autoload.php' (include_path='.:/usr/share/php7') in /app/laravel_blog/index.php on line 24" while reading response header from upstream, client: 172.18.0.1, server: laravel-blog.com, request: "GET /Test/getTest HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "laravel-blog.com:8888"
+2022/02/21 11:39:57 [error] 7#0: *14 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/app/laravel_blog/../vendor/autoload.php): failed to open stream: No such file or directory in /app/laravel_blog/index.php on line 24PHP message: PHP Fatal error:  require(): Failed opening required '/app/laravel_blog/../vendor/autoload.php' (include_path='.:/usr/share/php7') in /app/laravel_blog/index.php on line 24" while reading response header from upstream, client: 172.18.0.1, server: laravel-blog.com, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "laravel-blog.com:8888"
+2022/02/21 11:40:19 [error] 7#0: *14 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/app/laravel_blog/../vendor/autoload.php): failed to open stream: No such file or directory in /app/laravel_blog/index.php on line 24PHP message: PHP Fatal error:  require(): Failed opening required '/app/laravel_blog/../vendor/autoload.php' (include_path='.:/usr/share/php7') in /app/laravel_blog/index.php on line 24" while reading response header from upstream, client: 172.18.0.1, server: laravel-blog.com, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "laravel-blog.com:8888"
+2022/02/21 11:41:11 [error] 7#0: *14 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: laravel-blog.com, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "laravel-blog.com:8888"
+2022/02/21 11:41:13 [error] 7#0: *14 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: laravel-blog.com, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "laravel-blog.com:8888"
+2022/02/21 11:41:14 [error] 7#0: *14 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: laravel-blog.com, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "laravel-blog.com:8888"
+2022/02/21 11:41:15 [error] 7#0: *14 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: laravel-blog.com, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "laravel-blog.com:8888"
+2022/02/21 11:41:24 [error] 7#0: *14 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: laravel-blog.com, request: "GET /Test/getTest HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "laravel-blog.com:8888"
+2022/02/21 11:45:15 [error] 7#0: *24 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: laravel-blog.com, request: "GET /Test/getTest HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "laravel-blog.com:8888"
+2022/02/21 11:46:07 [error] 7#0: *24 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: laravel-blog.com, request: "GET / HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "laravel-blog.com:8888"
+2022/02/21 11:46:30 [error] 7#0: *32 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: laravel-blog.com, request: "POST /Test/getTest HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "laravel-blog.com:8888"
+2022/02/21 11:46:38 [error] 7#0: *32 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: laravel-blog.com, request: "POST / HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "laravel-blog.com:8888"
+2022/02/21 11:46:45 [error] 7#0: *32 FastCGI sent in stderr: "Primary script unknown" while reading response header from upstream, client: 172.18.0.1, server: laravel-blog.com, request: "POST /index.php HTTP/1.1", upstream: "fastcgi://172.18.0.2:9000", host: "laravel-blog.com:8888"
+2022/02/21 11:52:48 [notice] 1#0: signal 15 (SIGTERM) received, exiting
+2022/02/21 11:52:48 [notice] 7#0: exiting
+2022/02/21 11:52:48 [notice] 8#0: exiting
+2022/02/21 11:52:48 [notice] 9#0: exiting
+2022/02/21 11:52:48 [notice] 10#0: exiting
+2022/02/21 11:52:48 [notice] 7#0: exit
+2022/02/21 11:52:48 [notice] 8#0: exit
+2022/02/21 11:52:48 [notice] 1#0: signal 17 (SIGCHLD) received from 7
+2022/02/21 11:52:48 [notice] 9#0: exit
+2022/02/21 11:52:48 [notice] 10#0: exit
+2022/02/21 11:52:48 [notice] 1#0: worker process 7 exited with code 0
+2022/02/21 11:52:48 [notice] 1#0: worker process 8 exited with code 0
+2022/02/21 11:52:48 [notice] 1#0: worker process 9 exited with code 0
+2022/02/21 11:52:48 [notice] 1#0: worker process 10 exited with code 0
+2022/02/21 11:52:48 [notice] 1#0: exit
