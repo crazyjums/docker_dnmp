@@ -17,7 +17,7 @@ services:
       - 3307:3306
     volumes:
       - ./mysql/conf.d:/etc/mysql/conf.d:rw     #配置文件挂载到当前宿主机的/home/mysql/conf
-      - ./mysql/data:/var/lib/mysql:rw            #数据挂载到当前宿主机的 /home/mysql/data  
+      - ./mysql/data:/var/lib/mysql:rw            #数据挂载到当前宿主机的 /home/mysql/data
       - ./mysql/my.cnf:/etc/my.cnf
     environment:
       - MYSQL_ROOT_PASSWORD=12345678
