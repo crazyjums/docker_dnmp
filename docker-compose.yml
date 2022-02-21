@@ -1,5 +1,39 @@
 version: "3"
 services:
+  nginx:
+    image: crazyjums/nginx
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    container_name: nginx
+    restart: always
+    ports:
+      - 892:80
+    tty: true
+    volumes:
+      - ./nginx/include:/usr/local/nginx/conf/include
+      - ./nginx/html/php_nginx:/usr/local/nginx/html/php_nginx
+      - ./nginx/html/vue_nginx:/usr/local/nginx/html/vue_nginx
+      - ./nginx/nginx.conf:/usr/local/nginx/conf/nginx.conf
+      - ./nginx/logs:/data/nginx/logs:rw
+    links:
+      - "php-fpm"
+    depends_on:
+      - php-fpm
+  php-fpm:
+    image: crazyjums/php-fpm
+    build:
+      context: ./php
+      dockerfile: Dockerfile
+    container_name: php-fpm
+    restart: always
+    ports:
+      - 9000:9000
+    tty: true
+    volumes:
+      - ./php/php-fpm.conf:/usr/local/php/etc/php-fpm.conf
+      - ./php/php-fpm.d:/usr/local/php/etc/php-fpm.d
+      - ./nginx/html/php_nginx:/app/php_nginx
   redis:
     image: redis
     container_name: redis
@@ -21,46 +55,3 @@ services:
       - ./mysql/my.cnf:/etc/my.cnf
     environment:
       - MYSQL_ROOT_PASSWORD=12345678
-  nginx:
-    image: nginx
-    container_name: nginx
-    ports:
-      - 8888:80
-    volumes:
-      - ./nginx/conf.d:/usr/local/nginx/conf/include
-      - ./nginx/html/php_nginx:/usr/local/nginx/html/php_nginx
-      - ./nginx/html/laravel_blog:/usr/local/nginx/html/laravel_blog
-      - ./nginx/html/vue_nginx:/usr/local/nginx/html/vue_nginx
-      - ./nginx/nginx.conf:/usr/local/nginx/conf/nginx.conf
-      - ./nginx/logs:/data/nginx/logs:rw
-    depends_on:
-      - php-fpm
-    links:
-      - "php-fpm"
-  php-fpm:
-    image: php-fpm
-    # build:
-    #   context: ./php
-    #   dockerfile: Dockerfile
-    container_name: php-fpm
-    user: root
-    privileged: true
-    ports: 
-      - 9000:9000
-    volumes:
-      - ./nginx/html/php_nginx:/app/php_nginx
-      - ./nginx/html/laravel_blog:/app/laravel_blog
-      - ./php/php-fpm.conf:/etc/php7/php-fpm.conf:rw
-      - ./php/php-fpm.d:/etc/php7/php-fpm.d:rw
-  vue:
-    build:
-      context: ./vue
-      dockerfile: Dockerfile
-    image: vue_dev_nodejs_10_vuecli_4
-    ports:
-      - 8899:8080
-    container_name: vue
-    volumes:
-      - ./vue/workspace:/workspace:rw
-    tty: true
-    stdin_open: true

@@ -1,16 +1,42 @@
-FROM alpine
+FROM alpine:latest
 
-RUN apk update && apk add -U php php-fpm tzdata php-json php-curl
+LABEL MAINTAINER="<crazyjums@gmail.com>"
+	
+## install php(enable-fpm) by sourece code
+ADD php-7.4.27.tar.gz /tmp
+COPY php-fpm.conf /tmp/php-fpm.conf
+COPY php-fpm.d/www.conf /tmp/www.conf
+COPY start.sh /tmp/start.sh
 
-# 设置时区
+WORKDIR /tmp/php-7.4.27
+
 ENV TZ=Asia/Shanghai
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+RUN  ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone \
+    && apk update && apk upgrade \
+    && apk add --no-cache --virtual .build-deps \
+    mlocate \
+    g++ \
+    pcre-dev \
+    zlib-dev \
+    make \
+    gcc \
+    libc-dev \
+    autoconf \
+    && apk add pcre \
+    libxml2-dev \
+    sqlite-dev \
+    && ./configure --prefix=/usr/local/php --enable-fpm \
+	&& make \
+	&& make install \
+	&& mv /tmp/start.sh /start.sh \
+	&& mv /tmp/php-fpm.conf /usr/local/php/etc/php-fpm.conf \
+	&& mv /tmp/www.conf /usr/local/php/etc/php-fpm.d/www.conf \
+	&& mkdir -p /app \
+	&& ln -s /usr/local/php/sbin/php-fpm /usr/local/bin/ \
+	&& rm -rf /tmp/* \
+	&& apk del .build-deps \
+	&& echo "build php-fpm success-------------ok | expose 9000"
 
-RUN sed -i '/listen = 127.0.0.1:9000/c\\listen = 0.0.0.0:9000' /etc/php7/php-fpm.d/www.conf
+EXPOSE 9000
 
-# RUN adduser nginx
-# USER nginx
-
-WORKDIR /opt
-# to run php-fpm foreground by force and allow-to-run-as-root
-CMD ["/usr/sbin/php-fpm7","-F", "-R"]
+ENTRYPOINT ["/bin/sh","/start.sh"]

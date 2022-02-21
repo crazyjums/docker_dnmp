@@ -1,3 +1,18 @@
+### 0 下载镜像
+
+如果嫌麻烦，可以直接从远程仓库下载已经打包好的[镜像](https://hub.docker.com/repository/docker/crazyjums/nginx-php-fpm-alpine)：
+```bash
+$ docker pull crazyjums/nginx-php-fpm-alpine
+```
+可以根据`Dockerfile`定制化镜像，然后自己手动打包:
+```bash
+$ cd dnmp_in_one
+$ docker build -t <image_name> .
+//或者直接使用docker-compose来启动
+$ docker-compose up -d nginx-php-fpm
+```
+等待几分钟，镜像就打包好了，然后在通过`docker-compose`来管理镜像即可。
+
 ### 1 开启服务
 
 ```bash
@@ -13,6 +28,15 @@ $ docker-compose up <service_name> -d  //以守护进程的方式运行
 $ docker-compose up redis
 $ docker-compose up reids -d  //以守护进程的方式运行
 ```
+
+开启`nginx`和`php-fpm`服务：
+
+```bash
+$ docker-compose up nginx php-fpm
+```
+
+开启之后使用`docker ps`查看已经启动的容器，然后再浏览器访问[http://localhost:892](http://localhost:892)，出现以下界面表示配置成功：
+![](./.readme_image/success.png)
 
 ### 2 关闭或重启服务
 
