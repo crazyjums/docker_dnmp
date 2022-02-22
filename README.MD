@@ -1,6 +1,6 @@
 ### 0 下载|构建镜像
 
-如果嫌麻烦，可以直接从远程仓库下载已经打包好的[nginx镜像](https://hub.docker.com/repository/docker/crazyjums/nginx)和[php-fpm镜像](https://hub.docker.com/repository/docker/crazyjums/php-fpm)：
+如果嫌麻烦，可以直接从远程仓库下载已经打包好的[nginx镜像](https://hub.docker.com/r/crazyjums/nginx)和[php-fpm镜像](https://hub.docker.com/r/crazyjums/php-fpm)：
 ```bash
 $ docker pull crazyjums/nginx # 下载nginx镜像
 $ docker pull crazyjums/php-fpm  # 下载php-fpm镜像
